@@ -1,0 +1,27 @@
+[package]
+name = "server"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+data-streamer = { path = "../data-streamer" }
+
+futures = "0.3.21"
+clap = { version = "3.1.8", features = ["derive"] }
+tokio = { version = "1.16.1", features = ["full"] }
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0.79"
+log = "0.4"
+pretty_env_logger = "0.4"
+tonic = { version = "0.8.0", features = ["tls"] }
+prost = "0.11.0"
+serde-enum-str = "0.2.5"
+float-ord = "0.3.2"
+futures-core = "0.3"
+futures-util = "0.3"
+tokio-stream = "0.1"
+
+[build-dependencies]
+tonic-build = "0.8.0"

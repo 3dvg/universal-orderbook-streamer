@@ -1,0 +1,26 @@
+[package]
+name = "client"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+tokio = { version = "1.16.1", features = ["full"] }
+log = "0.4"
+pretty_env_logger = "0.4"
+tonic = { version = "0.8.0", features = ["tls"] }
+prost = "0.11.0"
+tokio-stream = "0.1"
+indicatif = "0.17.1"
+
+[build-dependencies]
+tonic-build = "0.8.0"
+
+[[bin]]
+name = "debug_client"
+path = "src/bin/debug_client.rs"
+
+[[bin]]
+name = "tui_client"
+path = "src/bin/tui_client.rs"
